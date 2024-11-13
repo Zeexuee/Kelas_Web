@@ -35,5 +35,17 @@
         // Redirect ke halaman dashboard setelah item ditambahkan
         redirect('dashboard');
     }
+
+    public function detail_keranjang()
+    {
+
+        $data['judul'] = 'Detail Keranjang Belanja';
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar');
+        $this->load->view('keranjang');
+        $this->load->view('templates/footer');
+    }
+
 }
-?>
+?>   
