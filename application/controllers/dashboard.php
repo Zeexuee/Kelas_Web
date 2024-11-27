@@ -47,5 +47,50 @@
         $this->load->view('templates/footer');
     }
 
+    public function hapus_keranjang()
+    {
+        $this->cart->destroy();
+        redirect('dashboard/index');
+    }
+
+    public function pembayaran()
+    {
+        $data['judul'] = 'Pembayaran';
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar');
+        $this->load->view('pembayaran');
+        $this->load->view('templates/footer');
+    }
+
+    public function proses_pesanan()
+    {
+        $data['judul'] = 'Proses Pesanan';
+
+        // input ke db
+        $is_process = $this->model_invoice->index();
+
+        if ($is_process) {
+            $this->cart->destroy();
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/sidebar');
+            $this->load->view('proses_pesanan');
+            $this->load->view('templates/footer');
+        } else {
+            echo ' pesanan anda gagal di proses';
+        }
+    }
+
+    public function detail($id_brg)
+    {
+        $data['judul'] = 'Detail';
+        $data['barang'] =  $this->model_barang->detail_brg($id_brg);
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar');
+        $this->load->view('detail_barang', $data);
+        $this->load->view('templates/footer');
+    }
 }
+
+
 ?>   
