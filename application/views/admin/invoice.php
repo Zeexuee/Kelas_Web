@@ -19,7 +19,7 @@
             <td><?= $i['tgl_pesan'] ?></td>
             <td><?= $i['batas_bayar'] ?></td>
             <td>
-                <a href="<?= base_url('admin/invoice/detail/' . $i['id']) ?>" class="btn btn-primary">Detail</a>
+                <a href="<?= base_url('invoice/detail/' . $i['id']) ?>" class="btn btn-primary">Detail</a>
             </td>
         </tr>
         <?php endforeach; ?>

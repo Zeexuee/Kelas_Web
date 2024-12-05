@@ -26,18 +26,18 @@
 
 
 
-    <div class="row text-center mt-4">
-      <?php foreach ($barang as $brg) : ?>
-          <div class="card ml-3 mb-3" style="width: 18rem;">
-              <img src="<?php echo base_url().'/uploads/'.$brg->gambar?>" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title mb-1"><?php echo $brg->nama_brg?></h5>
-                <small><?php echo $brg->keterangan ?></small><br>
-                <span class="badge badge-pill badge-success mb-3">Rp.<?php echo number_format($brg->harga,0,',','.')  ?></span>
-                <?php echo anchor('dashboard/tambah_ke_keranjang/' . $brg->id_brg, '<div class="btn btn-sm btn-primary">Tambah ke Keranjang</div>'); ?>
-                 <?php echo anchor('dashboard/detail/' . $brg->id_brg, '<div class="btn btn-sm btn-success">detail</div>'); ?>
-              </div>
-          </div>
-      <?php endforeach; ?>
+      <div class="row text-center mt-3">
+        <?php foreach ($pakaian_wanita as $pp) : ?>
+        <div class="col card ml-3" style="width: 16rem;">
+            <img src="<?= base_url('uploads/' . $pp['gambar']) ?>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title mb-1"><?= $pp['nama_brg']; ?></h5>
+                <small><?= $pp['keterangan']; ?></small> <br>
+                <span class="badge badge-pill badge-success mb-3">Rp.<?= number_format($pp['harga'], 0, ',', '.'); ?></span>
+                <?= anchor('dashboard/tambah_keranjang/' . $pp['id_brg'], '<div class="btn btn-sm btn-primary">Tambah ke keranjang</div>') ?>
+                <a href="<?= base_url('dashboard/detail/' . $pp['id_brg']) ?>" class="btn btn-sm btn-success mb-0">Detail</a>
+            </div>
+        </div>
+        <?php endforeach; ?>
     </div>
 </div> 

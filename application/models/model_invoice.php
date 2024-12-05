@@ -39,9 +39,9 @@ class model_invoice extends CI_Model
         }
     }
 
-}
 
-   /* public function getInvoicebyId($id_invoice)
+
+    public function getInvoicebyId($id_invoice)
     {
         $result = $this->db->where('id', $id_invoice)->get('tb_invoice');
         if ($result->num_rows() > 0) {
@@ -60,4 +60,4 @@ class model_invoice extends CI_Model
             return false;
         }
     }
-} */
+} 

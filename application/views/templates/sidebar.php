@@ -19,7 +19,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="<?php echo base_url ('dashboard') ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -36,31 +36,31 @@
             
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link " href="table.html">
+                <a class="nav-link " href="<?php echo base_url ('kategori/elektronik') ?>">
                     <i class="fas fa-fw fa-tv"></i>
                     <span>Elektronik</span>
                 </a>
             </li>
              <li class="nav-item">
-                <a class="nav-link " href="table.html">
+                <a class="nav-link " href="<?php echo base_url ('kategori/pakaian_pria') ?>">
                     <i class="fas fa-fw fa-tshirt"></i>
                     <span>Pakaian Pria</span>
                 </a>
             </li>
                <li class="nav-item">
-                <a class="nav-link " href="table.html">
+                <a class="nav-link " href="<?php echo base_url ('kategori/pakaian_wanita') ?>">
                     <i class="fas fa-fw fa-tshirt"></i>
                     <span>Pakaian Wanita</span>
                 </a>
             </li>
               <li class="nav-item">
-                <a class="nav-link " href="table.html">
+                <a class="nav-link " href="<?php echo base_url ('kategori/pakaian_anak') ?>">
                     <i class="fas fa-fw fa-tshirt"></i>
                     <span>Pakaian Anak</span>
                 </a>
             </li>
               <li class="nav-item">
-                <a class="nav-link " href="table.html">
+                <a class="nav-link " href="<?php echo base_url ('kategori/olahraga') ?>">
                     <i class="fas fa-fw fa-futbol"></i>
                     <span>Peralatan Olahraga</span>
                 </a>
